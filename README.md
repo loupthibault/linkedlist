@@ -2,6 +2,8 @@
 
 A Javascript Linked List.
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/loupthibault/linkedlist/blob/master/LICENSE)
+
 ## Getting started
 
 ### Install
