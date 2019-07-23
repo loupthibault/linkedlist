@@ -1,6 +1,6 @@
 {
   "name": "@loupthibault/linkedlist",
-  "version": "0.0.0-development",
+  "version": "0.1.0",
   "description": "Javascript Linked List",
   "main": "lib/linkedlist.cjs.js",
   "module": "lib/linkedlist.esm.js",
