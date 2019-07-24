@@ -7,13 +7,13 @@ A Javascript Linked List.
 ## Getting started
 
 ### Install
-```
+```sh
 npm i @loupthibault/linkedlist
 ```
 
 ### Usage
 
-```
+```js
 import LinkedList from '@loupthibault/linkedlist';
 
 
