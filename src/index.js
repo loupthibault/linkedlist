@@ -23,9 +23,9 @@ class LinkedList {
     // Equivalent to Array(len)
     if (len === 1) {
       len = values[0];
-      head = this._tail = newNode = new LinkedListNode();
+      head = this._tail = newNode = new LLNode();
       for (i = 1; i < len; ++i) {
-        newNode = new LinkedListNode();
+        newNode = new LLNode();
         newNode.next = head;
         head.prev = newNode;
         head = newNode;
@@ -34,9 +34,9 @@ class LinkedList {
     // Equivalent to Array(value0, value1, ..., valueN)
     else if (len > 1) {
       i = len - 1;
-      head = this._tail = newNode = new LinkedListNode(values[i--]);
+      head = this._tail = newNode = new LLNode(values[i--]);
       for (; i >= 0; --i) {
-        newNode = new LinkedListNode(values[i]);
+        newNode = new LLNode(values[i]);
         newNode.next = head;
         head.prev = newNode;
         head = newNode;
@@ -84,7 +84,7 @@ class LinkedList {
     while (++i < numArgs) {
 
       arg = args[i];
-      newNode = new LinkedListNode(arg);
+      newNode = new LLNode(arg);
       newNode.prev = this._tail;
 
       if (this._tail) {
@@ -96,6 +96,8 @@ class LinkedList {
       this._tail = newNode;
     }
     this._length += numArgs;
+
+    return this._length;
   }
 
   /**
@@ -145,7 +147,7 @@ class LinkedList {
     while (++i < numArgs) {
 
       arg = args[i];
-      newNode = new LinkedListNode(arg);
+      newNode = new LLNode(arg);
       newNode.next = this._head;
 
       if (this._head) {
@@ -157,8 +159,9 @@ class LinkedList {
       this._head = newNode;
     }
 
-    this._length += numArgs;
+    this._length += numArgs;  
 
+    return this._length;
   }
 
   forEach(fn) {
@@ -174,7 +177,7 @@ class LinkedList {
 }
 
 
-class LinkedListNode {
+class LLNode {
 
   constructor(data = null) {
     this.next = null;
