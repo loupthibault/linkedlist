@@ -14,11 +14,10 @@ export default class LinkedList {
 
     constructor(values: any[]);
 
-    getArray(): any[];
+    toArray(): any[];
     push(args: any[]): number;
     unshift(args: any[]): number;
     shift(): any;
     pop(): any;
     forEach(fn: Function): void;
-    getArray(): Array;
 }
