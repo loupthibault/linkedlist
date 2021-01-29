@@ -2,27 +2,22 @@
   "name": "@loupthibault/linkedlist",
   "version": "0.1.2",
   "description": "Javascript Linked List",
-  "main": "lib/linkedlist.cjs.js",
-  "module": "lib/linkedlist.esm.js",
-  "browser": "dist/linkedlist.umd.js",
+  "source": "src/index.js",
+  "main": "dist/linkedlist.js",
+  "exports": "dist/linkedlist.modern.js",
+  "module": "dist/linkedlist.module.js",
+  "unpkg": "dist/linkedlist.umd.js",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "prepare": "npm run build"
+    "build": "microbundle build -i src/index.js --compress --no-sourcemap --external none"
   },
-  "author": "Loup-Rodolphe THIBAULT <loupthibault@gmail.com> (louprodolphethibault.com)",
+  "author": "Loup-Rodolphe THIBAULT (louprodolphethibault.com)",
   "license": "MIT",
   "files": [
-    "lib",
     "dist"
   ],
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "rollup": "^1.28.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.3"
-  }
+    "eslint": "^7.18.0",
+    "microbundle": "^0.13.0"
+  },
+  "dependencies": {}
 }
