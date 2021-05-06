@@ -3,10 +3,10 @@
   "version": "0.1.3",
   "description": "Javascript Linked List",
   "source": "src/index.js",
-  "main": "dist/linkedlist.js",
-  "exports": "dist/linkedlist.modern.js",
-  "module": "dist/linkedlist.module.js",
-  "unpkg": "dist/linkedlist.umd.js",
+  "main": "./dist/linkedlist.js",
+  "exports": "./dist/linkedlist.modern.js",
+  "module": "./dist/linkedlist.module.js",
+  "unpkg": "./dist/linkedlist.umd.js",
   "scripts": {
     "build": "microbundle build -i src/index.js --compress --no-sourcemap --external none"
   },
@@ -16,7 +16,7 @@
     "dist"
   ],
   "devDependencies": {
-    "eslint": "^7.18.0",
+    "eslint": "^7.25.0",
     "microbundle": "^0.13.0"
   },
   "dependencies": {}
